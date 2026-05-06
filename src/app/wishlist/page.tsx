@@ -1,9 +1,10 @@
-import React from 'react'
 import { getUserWishlist } from './getUserWishlist.action'
 import PageTitle from '@/components/PageTitle/PageTitle'
 import { ArrowBigRight, Heart } from 'lucide-react'
 import WishlistCard from '@/components/WishlistCard/WishlistCard'
 import ShoppingButton from '@/components/ShoppingButton/ShoppingButton'
+
+export const dynamic = "force-dynamic";
 
 export default async function page() {
 
