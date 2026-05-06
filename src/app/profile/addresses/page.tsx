@@ -3,6 +3,8 @@ import { LocationEdit, Phone, Plus, Home, Pen, Trash } from "lucide-react";
 import { getUserAddresses } from "./getUserAddresses.action";
 import AddressCard from "@/components/AddressCard/AddressCard";
 
+export const dynamic = "force-dynamic";
+
 export default async function page() {
 
     const { data } = await getUserAddresses()
