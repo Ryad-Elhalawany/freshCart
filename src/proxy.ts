@@ -1,8 +1,9 @@
 import { getToken } from "next-auth/jwt"
 import { NextRequest, NextResponse } from "next/server"
+import { getUserToken } from "./app/myUtil";
 
 export async function proxy(req: NextRequest) {
-    const token = await getToken({ req, secret: process.env.NEXTAUTH_SECRET, })
+    const token = await getUserToken()
     const pathName = req.nextUrl.pathname
     const isAuth: boolean = pathName === '/login' || pathName === '/register';
 
